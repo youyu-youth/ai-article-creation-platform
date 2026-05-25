@@ -22,7 +22,7 @@ import static com.yyyouth.template.constant.UserConstant.VIP_ROLE;
  * 2. 通过影响行数判断操作是否成功，无需先查询再更新
  * 3. 使用 @Transactional 确保配额扣减与后续操作的一致性
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Service
 @Slf4j

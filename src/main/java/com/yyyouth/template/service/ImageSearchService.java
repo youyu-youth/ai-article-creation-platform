@@ -13,7 +13,7 @@ import com.yyyouth.template.model.enums.ImageMethodEnum;
  * 2. 在 ImageMethodEnum 中添加对应的枚举值
  * 3. 添加对应的配置类（如需要）
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 public interface ImageSearchService {
 

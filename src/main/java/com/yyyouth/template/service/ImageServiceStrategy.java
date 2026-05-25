@@ -22,7 +22,7 @@ import java.util.Map;
  * - 支持服务可用性检查和自动降级
  * - 统一处理图片上传到 COS
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Service
 @Slf4j

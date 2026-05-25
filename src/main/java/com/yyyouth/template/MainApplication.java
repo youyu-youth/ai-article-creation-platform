@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 /**
  * 主类（项目启动入口）
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @SpringBootApplication
 @MapperScan("com.yyyouth.template.mapper")

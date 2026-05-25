@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Mermaid 图表生成配置
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Configuration
 @ConfigurationProperties(prefix = "mermaid")

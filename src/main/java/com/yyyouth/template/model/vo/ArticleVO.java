@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 文章视图
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Data
 public class ArticleVO implements Serializable {

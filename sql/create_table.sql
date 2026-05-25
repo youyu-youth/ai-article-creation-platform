@@ -1,5 +1,5 @@
 # 数据库初始化（基础表结构）
-# @author <a href="https://codefather.cn">编程导航学习圈</a>
+# @author yyyouth
 # 注意：此文件只包含基础表结构，其他字段由增量 SQL 文件添加
 
 -- 设置字符集（解决中文乱码问题）

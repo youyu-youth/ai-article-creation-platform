@@ -20,7 +20,7 @@ import static com.yyyouth.template.constant.ArticleConstant.PICSUM_URL_TEMPLATE;
  * 表情包检索服务（基于 Bing 图片搜索）
  * 程序自动在关键词后拼接"表情包"进行搜索
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Service
 @Slf4j

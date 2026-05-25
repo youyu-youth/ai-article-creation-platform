@@ -19,7 +19,7 @@ import static com.yyyouth.template.constant.ArticleConstant.PICSUM_URL_TEMPLATE;
  * Mermaid 流程图生成服务
  * 使用 mermaid-cli 将 Mermaid 代码转换为图片
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Service
 @Slf4j

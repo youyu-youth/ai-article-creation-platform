@@ -1,5 +1,5 @@
 -- 用户配额升级脚本
--- @author <a href="https://codefather.cn">编程导航学习圈</a>
+-- @author yyyouth
 
 use ai_passage_creator;
 

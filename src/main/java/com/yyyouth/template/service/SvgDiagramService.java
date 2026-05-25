@@ -22,7 +22,7 @@ import static com.yyyouth.template.constant.ArticleConstant.PICSUM_URL_TEMPLATE;
  * SVG 概念示意图生成服务
  * 使用 AI 生成 SVG 代码，适合概念示意、思维导图样式、关系展示等场景
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Service
 @Slf4j

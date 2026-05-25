@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Iconify 图标库配置
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Configuration
 @ConfigurationProperties(prefix = "iconify")

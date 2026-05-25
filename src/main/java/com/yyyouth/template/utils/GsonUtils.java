@@ -12,7 +12,7 @@ import java.lang.reflect.Type;
  * Gson 工具类
  * 提供统一的 Gson 实例，避免重复创建
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Slf4j
 public class GsonUtils {

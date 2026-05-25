@@ -22,7 +22,7 @@ import java.util.Map;
  * 智能体执行 AOP 切面
  * 自动记录智能体执行日志和性能数据
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Aspect
 @Component

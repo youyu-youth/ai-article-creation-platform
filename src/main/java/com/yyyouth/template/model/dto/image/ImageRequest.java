@@ -7,7 +7,7 @@ import lombok.Data;
  * 图片请求对象
  * 统一封装图片获取所需的各种参数，便于扩展
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Data
 @Builder

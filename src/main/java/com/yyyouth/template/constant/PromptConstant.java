@@ -3,7 +3,7 @@ package com.yyyouth.template.constant;
 /**
  * Prompt 模板常量
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 public interface PromptConstant {
 

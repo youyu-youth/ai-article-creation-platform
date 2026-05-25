@@ -9,7 +9,7 @@ import static com.yyyouth.template.constant.ArticleConstant.*;
 /**
  * 表情包检索配置
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Configuration
 @ConfigurationProperties(prefix = "emoji-pack")

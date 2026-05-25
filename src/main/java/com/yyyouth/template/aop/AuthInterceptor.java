@@ -19,7 +19,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 /**
  * 权限校验 AOP
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Aspect
 @Component

@@ -19,7 +19,7 @@ import static com.yyyouth.template.constant.ArticleConstant.*;
 /**
  * Pexels 图片检索服务
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Service
 @Slf4j

@@ -9,7 +9,7 @@ import java.util.Base64;
  * 图片数据封装类
  * 用于统一处理不同来源的图片数据（字节、URL、base64 等）
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 @Data
 @Builder

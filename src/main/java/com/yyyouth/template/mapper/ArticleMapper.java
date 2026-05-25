@@ -6,7 +6,7 @@ import com.yyyouth.template.model.entity.Article;
 /**
  * 文章 Mapper
  *
- * @author <a href="https://codefather.cn">编程导航学习圈</a>
+ * @author yyyouth
  */
 public interface ArticleMapper extends BaseMapper<Article> {
 
