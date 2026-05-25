@@ -74,3 +74,6 @@ src/main/resources/application-local.yml
 
 
 docs
+.codegraph
+.cursor
+.understand-anything
