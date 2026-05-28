@@ -1,8 +1,6 @@
-# AI 爆款文章创作器 ✍️
+# AI 爆款文章创作器
 
 <div align="center">
-
-**AI 爆款文章创作器**
 
 基于多智能体协作，自动完成从选题、大纲、正文到配图的全流程图文创作
 
@@ -14,9 +12,9 @@
 
 </div>
 
-## 🏗 项目简介
+## 项目简介
 
-AI 爆款文章创作器是一个基于 **Spring AI Alibaba** 构建的智能图文创作平台，通过 **5 个智能体协作** 完成从选题到图文文章的全自动创作，每个阶段都支持用户介入，实现人机协作的创作体验。
+基于 **Spring AI Alibaba** 构建的智能图文创作平台，通过 5 个智能体协作完成从选题到图文文章的全自动创作，每个阶段都支持用户介入。
 
 ```
 阶段1: 选题 → 生成 3-5 个标题方案 → 用户选择
@@ -24,18 +22,18 @@ AI 爆款文章创作器是一个基于 **Spring AI Alibaba** 构建的智能图
 阶段3: 大纲 → 生成正文 → 分析配图需求 → 生成配图 → 图文合成
 ```
 
-## 🎯 核心价值
+## 核心特性
 
-| 特性 | 说明 | 价值 |
-|------|------|------|
-| 🤖 多智能体协作 | 5 个 Agent 分工协作，StateGraph 编排 | 专业分工，质量更高 |
-| 🎨 多元配图 | 6 种配图策略 + 自动降级 | 图文并茂，永不中断 |
-| 📡 实时流式输出 | SSE 推送大纲/正文创作过程 | 所见即所得 |
-| 🧑‍💻 人机协作 | 三阶段创作，每步可介入 | 创作可控 |
-| 💎 VIP 会员体系 | Stripe 支付 + 配额管理 | 商业化就绪 |
-| 🐳 Docker 一键部署 | docker compose up 即可运行 | 5 分钟上手 |
+| 特性 | 说明 |
+|------|------|
+| 多智能体协作 | 5 个 Agent 分工协作，StateGraph 编排 |
+| 多元配图 | 6 种配图策略 + 自动降级 |
+| 实时流式输出 | SSE 推送大纲/正文创作过程 |
+| 人机协作 | 三阶段创作，每步可介入 |
+| VIP 会员体系 | Stripe 支付 + 配额管理 |
+| Docker 一键部署 | docker compose up 即可运行 |
 
-## ✨ 功能特性
+## 功能概览
 
 ### 智能体协作
 
@@ -66,10 +64,10 @@ AI 爆款文章创作器是一个基于 **Spring AI Alibaba** 构建的智能图
 
 ### 文章风格
 
-- 🔬 科技风格 - 专业严谨
-- 💝 情感风格 - 温暖感人  
-- 📚 教育风格 - 通俗易懂
-- 😄 轻松幽默 - 诙谐有趣
+- 科技风格 - 专业严谨
+- 情感风格 - 温暖感人
+- 教育风格 - 通俗易懂
+- 轻松幽默 - 诙谐有趣
 
 ### SSE 实时通信
 
@@ -88,15 +86,15 @@ AI 爆款文章创作器是一个基于 **Spring AI Alibaba** 构建的智能图
 | `MERGE_COMPLETE` | 图文合成完成 |
 | `ERROR` | 错误通知 |
 
-### 其他特性
+### 其他功能
 
-- ✅ 文章管理（列表、详情、删除）
-- ✅ Markdown 导出
-- ✅ VIP 会员体系（Stripe 支付）
-- ✅ 智能体执行日志追踪（AOP 自动记录）
-- ✅ 管理后台统计分析
+- 文章管理（列表、详情、删除）
+- Markdown 导出
+- VIP 会员体系（Stripe 支付）
+- 智能体执行日志追踪（AOP 自动记录）
+- 管理后台统计分析
 
-## 🛠 技术栈
+## 技术栈
 
 ### 后端
 
@@ -127,7 +125,7 @@ AI 爆款文章创作器是一个基于 **Spring AI Alibaba** 构建的智能图
 | ECharts | 6.0 | 数据可视化 |
 | Axios | 1.11 | HTTP 客户端 |
 
-## 🚀 快速开始
+## 快速开始
 
 ### 环境要求
 
@@ -163,7 +161,7 @@ pexels:
 # 可选配置
 stripe:
   api-key: sk_test_xxx  # 支付功能
-  
+
 tencent:
   cos:
     secret-id: xxx  # 图片上传
@@ -187,7 +185,7 @@ npm run dev
 
 前端页面：http://localhost:5173
 
-## 🐳 Docker 一键部署（推荐）
+## Docker 部署
 
 ### 前置条件
 
@@ -198,7 +196,7 @@ npm run dev
 
 ```bash
 # 1. 复制环境变量配置文件
-cp .env .env
+cp .env.example .env
 
 # 2. 编辑 .env 文件，填写必需的 API Key
 # 必须配置：DASHSCOPE_API_KEY 和 PEXELS_API_KEY
@@ -206,14 +204,9 @@ vim .env
 
 # 3. 一键启动所有服务
 docker compose up -d --build
-
-# 或使用启动脚本（自动检查环境）
-./start.sh
 ```
 
-### 国内网络使用（镜像加速）
-
-如果遇到 Docker 镜像拉取失败，使用国内镜像版本：
+### 国内网络（镜像加速）
 
 ```bash
 docker compose -f docker-compose.china.yml up -d --build
@@ -223,51 +216,40 @@ docker compose -f docker-compose.china.yml up -d --build
 
 | 服务 | 端口 | 说明 |
 |------|------|------|
-| 前端 | 80 | 访问地址：http://localhost |
-| 后端 | 8123 | API 接口：http://localhost:8123/api |
+| 前端 | 80 | http://localhost |
+| 后端 | 8123 | http://localhost:8123/api |
 | 接口文档 | 8123 | http://localhost:8123/api/doc.html |
-| MySQL | 不暴露 | 仅内部网络访问（可选暴露到 13306） |
-| Redis | 不暴露 | 仅内部网络访问（可选暴露到 16379） |
+| MySQL | 不暴露 | 仅内部网络访问（可选 13306） |
+| Redis | 不暴露 | 仅内部网络访问（可选 16379） |
 
-> **安全说明**：MySQL 和 Redis 默认不暴露端口到宿主机，仅通过 Docker 内部网络访问。如需从宿主机连接数据库进行调试，可在 `docker-compose.yml` 中取消相应 `ports` 注释。
+> MySQL 和 Redis 默认不暴露端口到宿主机，仅通过 Docker 内部网络访问。如需调试，可在 `docker-compose.yml` 中取消相应 `ports` 注释。
 
 ### 常用命令
 
 ```bash
-# 查看服务状态
-docker compose ps
-
-# 查看服务日志
-docker compose logs -f backend    # 后端日志
-docker compose logs -f frontend   # 前端日志
-docker compose logs -f mysql      # 数据库日志
-
-# 重启单个服务
-docker compose restart backend
-
-# 停止所有服务
-docker compose down
-
-# 停止并删除数据卷（清空数据）
-docker compose down -v
+docker compose ps                          # 查看服务状态
+docker compose logs -f backend             # 后端日志
+docker compose restart backend             # 重启单个服务
+docker compose down                        # 停止所有服务
+docker compose down -v                     # 停止并删除数据卷
 ```
 
-### 环境变量说明
+### 环境变量
 
 | 变量名 | 必需 | 默认值 | 说明 |
 |--------|------|--------|------|
-| DASHSCOPE_API_KEY | ✅ | - | 通义千问 API Key |
-| PEXELS_API_KEY | ✅ | - | Pexels 图片 API Key |
+| DASHSCOPE_API_KEY | 是 | - | 通义千问 API Key |
+| PEXELS_API_KEY | 是 | - | Pexels 图片 API Key |
 | MYSQL_ROOT_PASSWORD | - | 123456 | MySQL root 密码 |
 | MYSQL_DATABASE | - | ai_passage_creator | 数据库名 |
 | BACKEND_PORT | - | 8123 | 后端端口 |
 | FRONTEND_PORT | - | 80 | 前端端口 |
-| NANO_BANANA_API_KEY | - | - | AI 生图（VIP功能） |
-| STRIPE_API_KEY | - | - | Stripe 支付（VIP功能） |
+| NANO_BANANA_API_KEY | - | - | AI 生图（VIP 功能） |
+| STRIPE_API_KEY | - | - | Stripe 支付（VIP 功能） |
 
 详见 `.env.example` 文件获取完整配置说明。
 
-## 📁 项目结构
+## 项目结构
 
 ```
 ├── src/main/java/com/yupi/template/
@@ -327,7 +309,7 @@ docker compose down -v
 └── pom.xml                          # Maven 配置
 ```
 
-## 🗄 数据库设计
+## 数据库设计
 
 ### 核心表
 
@@ -348,7 +330,7 @@ titleOptions         -- 标题方案列表（JSON）
 enabledImageMethods  -- 允许的配图方式（JSON 数组）
 ```
 
-## 🔑 API Key 获取
+## API Key 获取
 
 | 服务 | 获取地址 | 说明 |
 |------|---------|------|
@@ -358,7 +340,7 @@ enabledImageMethods  -- 允许的配图方式（JSON 数组）
 | 腾讯云 COS | https://console.cloud.tencent.com | 图片上传 |
 | Nano Banana | - | Gemini AI 生图（VIP 功能） |
 
-## 🧪 测试账号
+## 测试账号
 
 | 账号 | 密码 | 角色 |
 |------|------|------|
@@ -366,7 +348,7 @@ enabledImageMethods  -- 允许的配图方式（JSON 数组）
 | user | 12345678 | 普通用户 |
 | test | 12345678 | 测试账号 |
 
-## 🏛 架构特点
+## 架构设计
 
 ### 多智能体编排
 
@@ -409,7 +391,7 @@ public enum ImageMethodEnum {
 - 配图生成实时通知
 - 阶段状态实时更新
 
-## 🔧 扩展指南
+## 扩展指南
 
 ### 添加新的配图方式
 
@@ -440,12 +422,12 @@ public class NewMethodService implements ImageSearchService {
 2. 在 `PromptConstant` 添加对应的 Prompt 附加内容
 3. 在 `ArticleAgentService.getStylePrompt()` 添加 case
 
-## 📖 相关文档
+## 相关文档
 
-- [VIP 功能说明](VIP_FEATURES.md) - VIP 会员权益介绍
-- [Stripe 支付配置](STRIPE_SETUP.md) - 支付功能配置指南
-- [项目架构概览](PROJECT_OVERVIEW.md) - 详细技术架构文档
+- [VIP 功能说明](VIP_FEATURES.md)
+- [Stripe 支付配置](STRIPE_SETUP.md)
+- [项目架构概览](PROJECT_OVERVIEW.md)
 
-## 👨‍💻 作者
+## 作者
 
 yyyouth
