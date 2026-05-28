@@ -8,7 +8,7 @@
           rel="noopener noreferrer"
           class="author-link"
         >
-          编程导航原创项目
+          超级AI爆款文章创作平台
         </a>
       </p>
     </div>

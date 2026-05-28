@@ -55,7 +55,11 @@ public class PaymentServiceImpl implements PaymentService {
         validateNotVip(user);
 
         ProductTypeEnum productType = ProductTypeEnum.VIP_PERMANENT;
+
+        //创建对应的支付会话，确保webhook 回调接口可以根据会话的状态正确处对应的充值用户，保证充值的安全性
         Session session = createStripeSession(userId, productType);
+
+        //保存到数据库中
         savePaymentRecord(userId, session, productType);
 
         log.info("创建支付会话成功, userId={}, sessionId={}", userId, session.getId());
@@ -169,8 +173,8 @@ public class PaymentServiceImpl implements PaymentService {
                 .setSuccessUrl(stripeConfig.getSuccessUrl())
                 .setCancelUrl(stripeConfig.getCancelUrl())
                 .addLineItem(buildLineItem(productType, amountInCents))
-                .putMetadata("userId", String.valueOf(userId))
-                .putMetadata("productType", productType.getValue())
+                .putMetadata("userId", String.valueOf(userId))     // 存入userId
+                .putMetadata("productType", productType.getValue())  // 存入productType 产品类型
                 .build();
 
         return Session.create(params);

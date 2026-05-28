@@ -23,7 +23,7 @@ public class StripeWebhookController {
     private PaymentService paymentService;
 
     /**
-     * 处理 Stripe Webhook 回调
+     * 处理 Stripe Webhook 回调，并不是支付页面
      */
     @PostMapping("/stripe")
     public String handleStripeWebhook(
@@ -31,7 +31,7 @@ public class StripeWebhookController {
             @RequestHeader("Stripe-Signature") String sigHeader) {
         
         try {
-            // 验证 Webhook 签名
+            // 验证 Webhook 签名，防止签名是伪造的
             Event event = paymentService.constructEvent(payload, sigHeader);
             
             log.info("收到 Stripe Webhook 事件, type={}", event.getType());

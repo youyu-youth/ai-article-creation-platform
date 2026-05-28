@@ -115,8 +115,10 @@ public class AgentExecutionAspect {
      * 提取输入数据（简化版，只记录关键信息）
      */
     private String extractInputData(ProceedingJoinPoint pjp) {
+
         try {
             Object[] args = pjp.getArgs();
+            log.info("agentExecutionAspect: args {}",args);
             if (args == null || args.length == 0) {
                 return null;
             }
